@@ -1,0 +1,110 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i>Student Registeration
+        </h1>
+        <% include ./partials/messages %>
+        <form action="/users/studregister" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="name"
+              id="studentname"
+              name="studentname"
+              class="form-control"
+              placeholder="Enter Name"
+              value="<%= typeof studentname != 'undefined' ? studentname : '' %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label">Registeration ID</label>
+            <input
+              type="text"
+              id="reg_id"
+              name="email"
+              class="form-control"
+              placeholder="Enter Registeration ID"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Create Password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Discipline</label>
+            <select
+            id="decipline"
+            name="decipline"
+            class="form-control"
+            >
+                <option>BSIT</option>
+                <option>BSCS</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Semsiter</label>
+            <select
+            id="semester"
+            name="semester"
+            class="form-control"
+            >
+                <option>1st Semster</option>
+                <option>2nd Semster</option>
+                <option>3rd Semster</option>
+                <option>4th Semster</option>
+                <option>5th Semster</option>
+                <option>6th Semster</option>
+                <option>7th Semster</option>
+                <option>8th Semster</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Section</label>
+            <select
+            id="section"
+            name="section"
+            class="form-control"
+            >
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Roll No</label>
+            <input
+              type="number"
+              id="rollnum"
+              name="rollnum"
+              class="form-control"
+              placeholder="Roll No"
+              value="<%= typeof rollnum != 'undefined' ? rollnum : '' %>"
+              required
+            />
+          </div>
+         
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </form>
+        <!-- <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p> -->
+      </div>
+    </div>
+  </div>
+  

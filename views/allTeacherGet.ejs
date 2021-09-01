@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Teacher Information</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  </head>
+<body>
+    <br><br>
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-primary">
+       <h3 style="color:white">Teacher Informatoin </h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered border-primary" id="teacher">
+        <thead>
+          
+          <tr>
+            <th>Teacher Name</th>
+
+            <th>Email</th>
+            <th>Delete</th>
+          </tr>
+          
+<% if(locals.teacherRegister) { %>
+  <% var sr = 1; teacherRegister.forEach((farm) => { %>
+          <tr id="record_<%= farm._id %>">
+            <td><%= farm.teachername %></td>
+            <td><%= farm.email %></td>
+            <!-- <td><%= farm.semster1 %></td>
+            <td><%= farm.SemSter1sectionA %></td>
+            <td><%= farm.Semster1SectionASubject %></td>
+            <td><%= farm.SemSter1sectionB %></td>
+            <td><%= farm.Semster1SectionBSubject %></td>
+            <td><%= farm.SemSter1sectionC %></td>
+            <td><%= farm.Semster1SectionCSubject %></td>
+            <td><%= farm.semster2 %></td>
+            <td><%= farm.SemSter2sectionA %></td>
+            <td><%= farm.Semster2SectionASubject %></td>
+            <td><%= farm.SemSter2sectionB %></td>
+            <td><%= farm.Semster2SectionBSubject %></td>
+            <td><%= farm.SemSter2sectionC %></td>
+            <td><%= farm.featuSemster2SectionCSubjectres %></td>
+            <td><%= farm.semster3 %></td>
+            <td><%= farm.SemSter3sectionA %></td>
+            <td><%= farm.Semster3SectionASubject %></td>
+            <td><%= farm.SemSter3sectionB %></td>
+            <td><%= farm.Semster3SectionBSubject %></td>
+            <td><%= farm.SemSter3sectionC %></td>
+            <td><%= farm.Semster3SectionCSubject %></td>
+            <td><%= farm.semster4 %></td>
+            <td><%= farm.SemSter4sectionA %></td>
+            <td><%= farm.Semster4SectionASubject %></td>
+            <td><%= farm.SemSter4sectionB %></td>
+            <td><%= farm.Semster4SectionBSubject %></td>
+            <td><%= farm.SemSter4sectionC %></td>
+            <td><%= farm.Semster4SectionCSubject %></td>
+            <td><%= farm.semster5 %></td>
+            <td><%= farm.SemSter5sectionA %></td>
+            <td><%= farm.Semster5SectionASubject %></td>
+            <td><%= farm.SemSter5sectionB %></td>
+            <td><%= farm.Semster5SectionBSubject %></td>
+            <td><%= farm.SemSter5sectionC %></td>
+            <td><%= farm.Semster5SectionCSubject %></td>
+            <td><%= farm.semster6 %></td>
+            <td><%= farm.SemSter6sectionA %></td>
+            <td><%= farm.Semster6SectionASubject %></td>
+            <td><%= farm.SemSter6sectionB %></td>
+            <td><%= farm.Semster6SectionBSubject %></td>
+            <td><%= farm.SemSter6sectionC %></td>
+            <td><%= farm.Semster6SectionCSubject %></td>
+            <td><%= farm.semster7 %></td>
+            <td><%= farm.SemSter7sectionA %></td>
+            <td><%= farm.Semster7SectionASubject %></td>
+            <td><%= farm.SemSter7sectionB %></td>
+            <td><%= farm.Semster7SectionBSubject %></td>
+            <td><%= farm.SemSter7sectionC %></td>
+            <td><%= farm.Semster7SectionCSubject %></td>
+            <td><%= farm.semster8 %></td>
+            <td><%= farm.SemSter8sectionA %></td>
+            <td><%= farm.Semster8SectionASubject %></td>
+            <td><%= farm.SemSter8sectionB %></td>
+            <td><%= farm.Semster8SectionBSubject %></td>
+            <td><%= farm.SemSter8sectionC %></td>
+            <td><%= farm.Semster8SectionCSubject %></td> -->
+            <td>
+              <!-- <form action="/adminRoutes/getteacherRegister/delete/<%=farm._id %>">
+              <input type="button" name="delete" value="Delete">
+              </form> -->
+              <a href="/adminRoutes/getteacherRegister/delete/<%=farm._id %>" onclick="myFunction()"   >Delete </a>
+             
+              <!-- class="delete_Btn" onclick="return deletethis('<%=farm._id %>')" -->
+           
+                  
+            </td>
+          </tr>
+          
+
+<% sr++; }); %>
+<% } %>
+
+        </thead>
+
+      </table>
+
+      </div>
+      <div class="card-footer">
+        .
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  //   $("#teacher").submit(function (e) {
+  
+  // e.preventDefault(); // avoid to execute the actual submit of the form.
+  // $('.loading').css('display', 'block');
+  // var files = $('#image')[0].files;
+  // formDataAll = new FormData(this)
+  // if(files.length > 0 ){
+  //   fd.append('image',files[0]);
+  // $.ajax({
+  //     type: "GET",
+  //     url: '/adminRoutes/getteacherRegister',
+  //     processData: false,
+  //     contentType: false,
+  //     enctype: 'multipart/form-data',
+  //     data: formDataAll,
+  //     // serializes the form's elements.
+  //     success: function (data) {
+  //         $('.loading').css('display', 'none');
+          
+  //         console.log(data);
+  //         window.location = "/adminRoutes/getteacherRegister";
+  
+  //     }
+  // });
+  // }
+  // });
+  </script>
+  <!-- <script>
+    function deletethis(id){
+      
+    var tid=id;
+    $.ajax({
+      url:'/adminRoutes/deleteTeacher'+ tid,
+      type: "DELETE",
+      data:{},
+      success: function(data){
+        alert(data);
+        removeThisRow(data);
+        
+        console.log("delete");
+      }
+    })
+  }
+  function removeThisRow(data){
+    $("#record_" + data).remove();
+  }
+  $(function (){
+    $("exmaple1").DataTable();
+  });
+  </script> -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>  </body>
+
+    </body>
+</html>

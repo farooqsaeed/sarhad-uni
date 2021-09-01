@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Students Information</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  </head>
+<body>
+    <br><br>
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-primary">
+       <h3 style="color:white">Students Informatoin </h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered border-primary" id="teacher">
+        <thead>
+          
+          <tr>
+            <th>Students Name</th>
+            <th>Email</th>
+           
+           <th>Delete</th>
+          </tr>
+          
+<% if(locals.studentregister) { %>
+  <% var sr = 1; studentregister.forEach((farm) => { %>
+          <tr id="record_<%= farm._id %>">
+            <td><%= farm.studentname %></td>
+            <td><%= farm.email %></td>
+            
+         
+            <td>
+              <!-- <form action="/adminRoutes/getteacherRegister/delete/<%=farm._id %>">
+              <input type="button" name="delete" value="Delete">
+              </form> -->
+              <a href="/userRoutes/getStudents/delete/<%=farm._id %>" onclick="myFunction()"   >Delete </a>
+             
+              <!-- class="delete_Btn" onclick="return deletethis('<%=farm._id %>')" -->
+           
+                  
+            </td>
+          </tr>
+          
+
+<% sr++; }); %>
+<% } %>
+
+        </thead>
+
+      </table>
+
+      </div>
+      <div class="card-footer">
+        .
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  //   $("#teacher").submit(function (e) {
+  
+  // e.preventDefault(); // avoid to execute the actual submit of the form.
+  // $('.loading').css('display', 'block');
+  // var files = $('#image')[0].files;
+  // formDataAll = new FormData(this)
+  // if(files.length > 0 ){
+  //   fd.append('image',files[0]);
+  // $.ajax({
+  //     type: "GET",
+  //     url: '/adminRoutes/getteacherRegister',
+  //     processData: false,
+  //     contentType: false,
+  //     enctype: 'multipart/form-data',
+  //     data: formDataAll,
+  //     // serializes the form's elements.
+  //     success: function (data) {
+  //         $('.loading').css('display', 'none');
+          
+  //         console.log(data);
+  //         window.location = "/adminRoutes/getteacherRegister";
+  
+  //     }
+  // });
+  // }
+  // });
+  </script>
+  <!-- <script>
+    function deletethis(id){
+      
+    var tid=id;
+    $.ajax({
+      url:'/adminRoutes/deleteTeacher'+ tid,
+      type: "DELETE",
+      data:{},
+      success: function(data){
+        alert(data);
+        removeThisRow(data);
+        
+        console.log("delete");
+      }
+    })
+  }
+  function removeThisRow(data){
+    $("#record_" + data).remove();
+  }
+  $(function (){
+    $("exmaple1").DataTable();
+  });
+  </script> -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>  </body>
+
+    </body>
+</html>

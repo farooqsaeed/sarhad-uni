@@ -1,0 +1,394 @@
+
+<body>
+ 
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    
+    <div class="sidebar-content">
+      
+      <div class="sidebar-brand">
+        
+        <a href="#">Sarhad Uni</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://i.pinimg.com/originals/27/bd/0b/27bd0ba73edf5b660015dcf88b978c89.png"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">Sarhad
+            <strong>University</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <!-- <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+              <!-- <span class="badge badge-pill badge-warning">New</span> -->
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="/dashboard">Dashboard
+                    <span class="badge badge-pill badge-success">Pro</span>
+                  </a>
+                </li>
+                <!-- <li>
+                  <a href="#">Dashboard 2</a>
+                </li> -->
+                <!-- <li>
+                  <a href="#">Dashboard 3</a>
+                </li> -->
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-shopping-cart"></i>
+              <span>More Items</span>
+              <!-- <span class="badge badge-pill badge-danger">3</span> -->
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="/adminRoutes/teacherRegister">Teacher Register
+
+                  </a>
+                </li>
+                <li>
+                  <a href="/users/stdregister">Student Register</a>
+                </li>
+                <li>
+                  <a href="/users/register">User Register</a>
+                </li>
+                <li>
+                  <a href="/adminRoutes/getteacherRegister">All Teacher Info
+
+                  </a>
+                </li>
+                <li>
+                  <a href="/userRoutes/studentregister">All Student Info</a>
+                </li>
+                <li>
+                  <a href="/adminRoutes/postMainMessage">NotesBoard</a>
+                </li>
+                <li>
+                  <a href="/adminRoutes/mainMessage">Get NotesBoard</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <!-- <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div> -->
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="row" id="top_menu" >
+      <a id="top_menu" href="/users/logout" class="btn btn-secondary" >Logout</a>
+      
+      </div>
+    <div class="">
+      <h2>Welcome To <%= user.name %></h2>
+      <hr>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+<div class="col-md-10 ">
+    <div class="row ">
+        <div class="col-lg-3 col-6" >
+            <a id="card_decoration" href="/adminRoutes/teacherRegister">
+              <div class="card l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large">                
+                      <i class="fas fa-chalkboard-teacher"></i>
+                                        </div>
+                    <div class="mb-4">
+                        <h6 class="card-title mb-0">Teacher Register</h6>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="small-box ">
+                            <p style="font-size: 13px;" class="d-flex align-items-center mb-0">
+                               Give This email & password To Teacher 
+                            </p>
+                        </div>
+                        <!-- <div class="col-4 text-right">
+                            <span>12.5% <i class="fa fa-arrow-up"></i></span>
+                        </div> -->
+                    </div>
+                    <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                        <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <a id="card_decoration" href="/adminRoutes/getteacherRegister">
+            <div class="card l-bg-blue-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-school"></i></div>
+                  <div class="mb-4">
+                      <h6 class="card-title mb-0">All Teacher Info</h6>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="small-box ">
+                        
+                          <h2 class="d-flex align-items-center mb-0">
+                         <script>getteacherRregisterCounter</script>
+                          </h2>
+                            
+                      </div>
+
+                      <!-- <div class="col-4 text-right">
+                          <span>9.23% <i class="fa fa-arrow-up"></i></span>
+                      </div> -->
+                  </div>
+                  <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                      <div class="progress-bar l-bg-green" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                  </div>
+              </div>
+          </div>
+          </a>
+           
+        </div>
+        <div class="col-lg-3 col-6">
+          <a id="card_decoration" href="/userRoutes/studentregister">
+            <div class="card l-bg-green-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-user-graduate"></i></div>
+                  <div class="mb-4">
+                      <h6 class="card-title mb-0">All Student Info</h6>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="small-box ">
+                          
+                      </div>
+                      <!-- <div class="col-4 text-right">
+                          <span>10% <i class="fa fa-arrow-up"></i></span>
+                      </div> -->
+                  </div>
+                  <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                      <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                  </div>
+              </div>
+          </div>
+          </a>
+         
+        </div> <br>
+        <div class="col-lg-3 col-6">
+          <a id="card_decoration" href="/adminRoutes/postMainMessage">
+            <div class="card l-bg-orange-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="far fa-clipboard"></i></div>
+                  <div class="mb-4">
+                      <h6 class="card-title mb-0">NotesBoard</h6>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="small-box ">
+                          <p style="font-size: 15px;" class="d-flex align-items-center mb-0">
+                              This is main Notesboard from admin side
+                          </p>
+                      </div>
+                      <!-- <div class="col-4 text-right">
+                          <span>2.5% <i class="fa fa-arrow-up"></i></span>
+                      </div> -->
+                  </div>
+                  <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                      <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                  </div>
+              </div>
+          </div>
+          </a>
+         
+        </div>
+        <div class="col-lg-3 col-6" >
+          <a id="card_decoration" href="/adminRoutes/mainMessage">
+            <div class="card l-bg-green">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-clipboard-list"></i></div>
+                  <div class="mb-4">
+                      <h6 class="card-title mb-0">Get Notesboard</h6>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="small-box ">
+                          
+                      </div>
+                      <!-- <div class="col-4 text-right">
+                          <span>12.5% <i class="fa fa-arrow-up"></i></span>
+                      </div> -->
+                  </div>
+                  <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                      <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                  </div>
+              </div>
+          </div>
+          </a>
+      </div>
+      <div class="col-lg-3 col-6">
+        <a id="card_decoration" href="/users/register">
+          <div class="card l-bg-green-dark">
+            <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fas fa-user-graduate"></i></div>
+                <div class="mb-4">
+                    <h6 class="card-title mb-0">User Register</h6>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="small-box ">
+                        
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                        <span>10% <i class="fa fa-arrow-up"></i></span>
+                    </div> -->
+                </div>
+                <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                    <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                </div>
+            </div>
+        </div>
+        </a>
+       
+      </div>
+      <div class="col-lg-3 col-6">
+        <a id="card_decoration" href="/users/stdregister">
+          <div class="card l-bg-green-dark">
+            <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fas fa-user-graduate"></i></div>
+                <div class="mb-4">
+                    <h6 class="card-title mb-0">Student Register</h6>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="small-box ">
+                        
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                        <span>10% <i class="fa fa-arrow-up"></i></span>
+                    </div> -->
+                </div>
+                <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                    <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                </div>
+            </div>
+        </div>
+        </a>
+       
+      </div> <br>
+      <!-- <div class="col-lg-3 col-6" >
+        <a id="card_decoration" href="">
+          <div class="card l-bg-own">
+            <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+                <div class="mb-4">
+                    <h6 class="card-title mb-0">New Orders</h6>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="small-box ">
+                        <h2 class="d-flex align-items-center mb-0">
+                            3,243
+                        </h2>
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                        <span>12.5% <i class="fa fa-arrow-up"></i></span>
+                    </div> -->
+                <!-- </div>
+                <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                    <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </div> --> 
+    </div>
+</div>
+      <hr>
+
+      <!-- <footer class="text-center">
+        <div class="mb-2">
+          <small>
+             Made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer" >
+              Usman Khan </a>
+          </small>
+        </div>
+        <div>
+          <a href="https://github.com/azouaoui-med" target="_blank">
+            <img alt="GitHub followers" src="https://img.shields.io/github/followers/azouaoui-med?label=github&style=social" />
+          </a>
+          <a href="https://twitter.com/azouaoui_med" target="_blank">
+            <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/azouaoui_med?label=twitter&style=social" />
+          </a>
+        </div>
+      </footer> -->
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "/dashboard",
+          success: function (data) {
+            if (data != undefined && data != "") {
+             console.log("some thing is missing");
+            }
+          },
+        });});
+    </script>
+</body>
